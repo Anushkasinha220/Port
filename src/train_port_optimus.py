@@ -1,14 +1,21 @@
 from __future__ import annotations
 
+import sys
 from pathlib import Path
+
+# Resolve project root robustly whether run as `python -m src.train_port_optimus`
+# (GitHub Actions / repo root) or from inside the src/ folder directly.
+_THIS_FILE = Path(__file__).resolve()
+# If this file is inside a `src` subfolder, go up 2 levels; otherwise go up 1.
+PROJECT_ROOT = _THIS_FILE.parents[1] if _THIS_FILE.parent.name == "src" else _THIS_FILE.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+MODEL_PATH = PROJECT_ROOT / "models" / "port_optimus_q_agent.pkl"
 
 from sim.port_env import PortEnvironment
 from src.engine import AgentConfig, GranularQLearningAgent, evaluate_agent
 from src.mlops import log_experiment
-
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-MODEL_PATH = PROJECT_ROOT / "models" / "port_optimus_q_agent.pkl"
 
 
 def main() -> None:

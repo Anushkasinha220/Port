@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .streamlit/
 streamlit.*.log
+*.egg-info/
+dist/
+build/
+.eggs/
+models/
