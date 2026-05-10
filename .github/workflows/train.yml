@@ -28,7 +28,7 @@ jobs:
         run: python -m src.train_port_optimus
 
       - name: Upload experiment results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: experiment-results
           path: |
