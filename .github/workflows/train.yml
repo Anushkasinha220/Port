@@ -1,0 +1,36 @@
+name: Port-Optimus CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Train Port-Optimus agent
+        run: python -m src.train_port_optimus
+
+      - name: Upload experiment results
+        uses: actions/upload-artifact@v3
+        with:
+          name: experiment-results
+          path: |
+            experiments/results.csv
+            experiments/metadata.json
