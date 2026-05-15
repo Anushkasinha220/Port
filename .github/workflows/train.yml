@@ -23,9 +23,22 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install -e .
+          pip install pytest
+
+      - name: Lint / syntax check
+        run: python -m compileall api.py app.py sim src scripts
+
+      - name: Run unit and integration tests
+        run: python -m pytest -q
+
+      - name: Smoke train and evaluate agent
+        run: python scripts/ci_smoke.py
 
       - name: Train Port-Optimus agent
         run: python -m src.train_port_optimus
+
+      - name: Monitoring and artifact checks
+        run: python scripts/monitor_artifacts.py
 
       - name: Upload experiment results
         uses: actions/upload-artifact@v4
@@ -34,3 +47,7 @@ jobs:
           path: |
             experiments/results.csv
             experiments/metadata.json
+            experiments/ci_smoke_metrics.json
+            experiments/monitoring_summary.json
+            models/port_optimus_q_agent.pkl
+            report_assets/metrics_chart.png

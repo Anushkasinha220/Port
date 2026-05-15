@@ -165,6 +165,72 @@
                 "Average_Safety": 91.6469
             },
             "model_path": "C:\\Users\\Anush\\Downloads\\Internals_Basics\\Port_Optimus_VS\\models\\port_optimus_q_agent.pkl"
+        },
+        {
+            "run_id": "ALPHA-2026-008",
+            "created_at": "2026-05-10T23:49:17",
+            "stress_test": "Normal",
+            "parameters": {
+                "agent": "GranularQLearningAgent",
+                "stress_test": "Normal",
+                "storm": false,
+                "peak_season": false,
+                "actions": "0 Rapid Discharge, 1 Buffered Move, 2 Idle/Charge"
+            },
+            "metrics": {
+                "Energy_Efficiency_Ratio": 0.3742,
+                "Throughput_Rate": 3.125,
+                "Total_Processed": 75.0,
+                "Total_Energy": 200.4309,
+                "Total_Cost": 61.3674,
+                "Average_Wait_Penalty": 0.6286,
+                "Average_Safety": 91.6469
+            },
+            "model_path": "C:\\Users\\Anush\\Downloads\\Port_Optimus\\models\\port_optimus_q_agent.pkl"
+        },
+        {
+            "run_id": "ALPHA-2026-009",
+            "created_at": "2026-05-11T09:46:07",
+            "stress_test": "Normal",
+            "parameters": {
+                "agent": "GranularQLearningAgent",
+                "stress_test": "Normal",
+                "storm": false,
+                "peak_season": false,
+                "actions": "0 Rapid Discharge, 1 Buffered Move, 2 Idle/Charge"
+            },
+            "metrics": {
+                "Energy_Efficiency_Ratio": 0.3742,
+                "Throughput_Rate": 3.125,
+                "Total_Processed": 75.0,
+                "Total_Energy": 200.4309,
+                "Total_Cost": 61.3674,
+                "Average_Wait_Penalty": 0.6286,
+                "Average_Safety": 91.6469
+            },
+            "model_path": "C:\\Users\\Anush\\Downloads\\Port_Optimus\\models\\port_optimus_q_agent.pkl"
+        },
+        {
+            "run_id": "ALPHA-2026-010",
+            "created_at": "2026-05-11T10:10:59",
+            "stress_test": "Storm",
+            "parameters": {
+                "agent": "GranularQLearningAgent",
+                "stress_test": "Storm",
+                "storm": true,
+                "peak_season": false,
+                "actions": "0 Rapid Discharge, 1 Buffered Move, 2 Idle/Charge"
+            },
+            "metrics": {
+                "Energy_Efficiency_Ratio": 0.3474,
+                "Throughput_Rate": 3.2083,
+                "Total_Processed": 77.0,
+                "Total_Energy": 221.6764,
+                "Total_Cost": 67.8197,
+                "Average_Wait_Penalty": 0.4823,
+                "Average_Safety": 93.2256
+            },
+            "model_path": "C:\\Users\\Anush\\Downloads\\Port_Optimus\\models\\port_optimus_q_agent.pkl"
         }
     ]
 }

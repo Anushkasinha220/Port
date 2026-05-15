@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "training_episodes": 4,
+  "rl_metrics": {
+    "Energy_Efficiency_Ratio": 0.1964,
+    "Throughput_Rate": 1.1667,
+    "Total_Processed": 28.0,
+    "Total_Energy": 142.5919,
+    "Total_Cost": 59.2243,
+    "Average_Wait_Penalty": 9.9185,
+    "Average_Safety": 74.3037
+  },
+  "baseline_metrics": {
+    "Energy_Efficiency_Ratio": 0.2417,
+    "Throughput_Rate": 1.875,
+    "Total_Processed": 45.0,
+    "Total_Energy": 186.1905,
+    "Total_Cost": 85.0116,
+    "Average_Wait_Penalty": 13.7425,
+    "Average_Safety": 83.3331
+  }
+}

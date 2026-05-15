@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "latest_run_id": "ALPHA-2026-010",
+  "stress_test": "Storm",
+  "throughput_rate": 3.2083,
+  "average_safety": 93.2256,
+  "checks": [
+    "OK trained model: port_optimus_q_agent.pkl (28918 bytes)",
+    "OK metrics CSV: results.csv (1077 bytes)",
+    "OK run metadata: metadata.json (9573 bytes)",
+    "OK metrics plot: metrics_chart.png (75702 bytes)"
+  ]
+}
