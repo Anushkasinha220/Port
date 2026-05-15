@@ -1,0 +1,13 @@
+.git
+.pytest_cache
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+venv
+env
+report_rendered
+report_assets/rubric_pages
+~$*.docx
